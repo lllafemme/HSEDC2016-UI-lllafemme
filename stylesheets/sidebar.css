@@ -6,80 +6,62 @@
   left: 0;
   width: 300px;
   height: 100%;
-  border-right: 1px solid pink;
+  border-right: 1px solid #FFE2F2;
   overflow: hidden;
 }
 
 .sidebarMenu {
-  width: calc (100% + 20px);
+  width: calc(100% + 20px);
   height: 100%;
+  overflow-y: scroll;
+}
+
+.sidebarMenuItem {
+  position: relative;
+  height: 50px;
+}
+
+.sidebarMenuItem::hover{
+  height: auto;
 }
 
 .sidebarMenuItem > div {
   position: relative;
   width: 300px;
   height: 50px;
-  padding: 10px 10px 10px 70px;
+  padding: 10px 10px 10px 60px;
   line-height: 30px;
 }
 
 .sidebarMenuItem > div:hover {
-  background: pink;
+  background: #FFE2F2;
 }
 
-.sidebarMenuItem > div::before {
+.sidebarMenuItem::before {
   display: block;
   position: absolute;
   top: 0;
   left: 10px;
-  width:50px;
+  width: 40px;
   height: 50px;
   line-height: 50px;
   font-size: 20px;
-  font-family: FontAwesome;
+  font-family: 'FontAwesome';
   text-align: center;
+  z-index: 1;
 }
 
-.sidebarMenuItem.smile > div::before {
-  content: '\f118';
-}
-
-.sidebarMenuItem.bicycle > div::before {
-  content: '\f206';
-}
-
-.sidebarMenuItem.star > div::before {
-  content: '\f005';
-}
-
-.sidebarMenuItem.hand > div::before {
-  content: '\f258';
-}
-
-.sidebarMenuItem.bolt > div::before {
-  content: '\f0e7';
-}
-
-.sidebarMenuItem.circle > div::before {
-  content: '\f22d';
-}
-
-.sidebarMenuItem.moon > div::before {
-  content: '\f186';
-}
-
-.sidebarMenuItem.bird > div::before {
-  content: '\f099';
-}
-
-.sidebarMenuItem.angle > div::before {
-  content: '\f102';
-}
-
-.sidebarMenuItem.heart > div::before {
-  content: '\f08a';
-}
-
+.sidebarMenuItem.smile::before  { content: '\f118'; }
+.sidebarMenuItem.bike::before   { content: '\f206'; }
+.sidebarMenuItem.star::before   { content: '\f005'; }
+.sidebarMenuItem.hand::before   { content: '\f258'; }
+.sidebarMenuItem.bolt::before   { content: '\f0e7'; }
+.sidebarMenuItem.circle::before { content: '\f22d'; }
+.sidebarMenuItem.moon::before   { content: '\f186'; }
+.sidebarMenuItem.bird::before   { content: '\f099'; }
+.sidebarMenuItem.angle::before  { content: '\f102'; }
+.sidebarMenuItem.heart::before  { content: '\f08a'; }
+.sidebarMenuItem.mode::before   { content: '\f104'; }
 
 .sidebarSubmenu {
   display: none;
@@ -91,10 +73,20 @@
 
 .sidebarSubmenuItem {
   height: 50px;
-  padding: 10px 10px 10px 20px;
+  padding: 10px 10px 10px 60px;
   line-height: 30px;
 }
 
 .sidebarSubmenuItem:hover {
-  background: pink;
+  background: #FFE2F2;
+}
+
+.sidebarSubmenuItem:first-child {
+  display: none;
+}
+
+.sidebarMenuItem:last-child {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
