@@ -16,15 +16,70 @@
 }
 
 .sidebarMenuItem > div {
+  position: relative;
   width: 300px;
   height: 50px;
-  padding: 10px;
+  padding: 10px 10px 10px 70px;
   line-height: 30px;
 }
 
 .sidebarMenuItem > div:hover {
   background: pink;
 }
+
+.sidebarMenuItem > div::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width:50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  font-family: FontAwesome;
+  text-align: center;
+}
+
+.sidebarMenuItem.smile > div::before {
+  content: '\f118';
+}
+
+.sidebarMenuItem.bicycle > div::before {
+  content: '\f206';
+}
+
+.sidebarMenuItem.star > div::before {
+  content: '\f005';
+}
+
+.sidebarMenuItem.hand > div::before {
+  content: '\f258';
+}
+
+.sidebarMenuItem.bolt > div::before {
+  content: '\f0e7';
+}
+
+.sidebarMenuItem.circle > div::before {
+  content: '\f22d';
+}
+
+.sidebarMenuItem.moon > div::before {
+  content: '\f186';
+}
+
+.sidebarMenuItem.bird > div::before {
+  content: '\f099';
+}
+
+.sidebarMenuItem.angle > div::before {
+  content: '\f102';
+}
+
+.sidebarMenuItem.heart > div::before {
+  content: '\f08a';
+}
+
 
 .sidebarSubmenu {
   display: none;
